@@ -4,7 +4,7 @@ import pygame as pg
 
 class txt_utl:
     def __init__(self, txt_dat, txt_srf):
-        self.txt_dat = jsn_dat(txt_dat)
+        self.txt_dat = jsn(txt_dat)
         self.txt_srf = txt_srf
     
     def ara(self, ara_txt, ara_siz, ara_sdw_plc=(0, 0)):
@@ -30,10 +30,10 @@ class txt_utl:
 
         self.drw_siz = int(drw_siz)
         self.drw_xy = (int(drw_xy[0])), int(drw_xy[1])
-        self.drw_clr = cfg_clr(drw_clr)
+        self.drw_clr = cfg(drw_clr)
         
         self.drw_sdw_plc = (int(drw_sdw_plc[0]), int(drw_sdw_plc[1]))
-        self.drw_sdw_clr = cfg_clr(drw_sdw_clr)
+        self.drw_sdw_clr = cfg(drw_sdw_clr)
 
         self.drw_cnr = (bool(drw_cnr[0]), bool(drw_cnr[1]))
         self.drw_cnr_val = self.ara(self.drw_txt, self.drw_siz, self.drw_sdw_plc)
